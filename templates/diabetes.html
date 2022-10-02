@@ -1,0 +1,161 @@
+{% extends 'NavBar.html' %}
+{% block body %}
+<br><br><br><br>
+    <div class="container-fluid">
+        <div className="container">
+            <form action ={{ url_for('diabetesPred') }} method="POST">
+                <div class="row">
+                    <div class="row mt-2">
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                            <h3>Diabetes Prediction</h3>
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm">
+                            <input type="text" class="inp" placeholder="Pregnancies:" name="n1"/>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" class="inp" placeholder="Glucose:" name="n2"/>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" class="inp" placeholder="Blood Pressure:" name="n3"/>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm">
+                            <input type="text" class="inp" placeholder="Skin Thickness:" name="n4"/>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" class="inp" placeholder="Insulin: " name="n5"/>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" class="inp" placeholder="BMI:" name="n6"/>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm">
+                            <input type="text" class="inp" placeholder="Diabetes Pedigree Function:" name="n7"/>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" class="inp" placeholder="Age:" name="n8"/>
+                        </div>
+                        <div class="col-sm">
+                            <input type="hidden" class="inp"/>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                            <button type="submit" class="btn btn-warning" id="submit">Submit</button>
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                    </div>
+                </div>
+                <br/>
+            </form>
+            <div class="row">
+                <div class="row mt-2">
+                    <div class="col-sm">
+                    </div>
+                    <div align="center" class="col-sm">
+                        <h3>Result: <button class="btn btn-danger">{{results2}}</button></h3>
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row mt-2">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top" src="/static/media/diabetes.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top" src="/static/media/fruits.jfif" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top" src="/static/media/diabetes.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    
+        
+    
+    
+    <!--
+    <div align ="center" class="main">
+        <h1>Please enter the following information</h1>
+        <form action ={{ url_for('diabetesPred') }} method="POST">
+            <table>
+                <tr>
+                    <td align="right">Pregnancies: </td>
+                    <td align="left"><input type="number" name="n1" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Glucose: </td>
+                    <td align="left"><input type="text" name="n2" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Blood Pressure: </td>
+                    <td align="left"><input type="text" name="n3" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Skin Thickness: </td>
+                    <td align="left"><input type="text" name="n4" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Insulin: </td>
+                    <td align="left"><input type="text" name="n5" /></td>
+                </tr>
+                <tr>
+                    <td align="right">BMI: </td>
+                    <td align="left"><input type="text" name="n6" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Diabetes Pedigree Function: </td>
+                    <td align="left"><input type="text" name="n7" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Age: </td>
+                    <td align="left"><input type="text" name="n8" /></td>
+                </tr>
+            </table>
+            <input type ="submit">
+        </form>
+        Result:{{results2}}
+    </div>
+    -->
+
+{% endblock body %}

@@ -1,0 +1,53 @@
+{% extends 'NavBar.html' %}
+
+{% block body %}
+<br><br><br><br>
+{{ results.items() }}
+<div class="container">
+    <div class="row">
+        <h2 style="background-color: #0f113f;color:white">Medical Document Scanner</h2>
+        <div class="col-sm-6">
+            <img class="img-fluid border border-primary" src="/static/media/magic_color.jpg" alt="magic color image">
+        </div>
+    
+        <div class="col-sm-6">
+            <img class="img-fluid border border-primary" src="/static/media/bounding_box.jpg" alt="bounding box image">
+    
+        </div>
+    
+    </div>
+</div>
+
+
+<br><br>
+<div class="container">
+    <div class="row">
+        <h3 style="background-color: #0f113f;color:white;">Named Entities</h3>
+        <table class="table table-hover" style="border: 3px solid black;">
+            <thead>
+                <tr>
+                    <th style="background: rgb(1,132,200);font-size:15pt;color:white">Entities</th>
+                    <th style="font-size:15pt;color:white;background: rgb(1,132,200);background: linear-gradient(90deg, rgba(1,132,200,1) 26%, rgba(254,254,254,0.927608543417367) 100%);">Extracted Text</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for key,value in results.items() %}
+                    <tr>
+                        <td style="background-color:#EBECF0;font-weight: bold;">{{ key }}</td>
+                        <td style="background-color:#EBECF0;"contenteditable='true'>{{ value }}</td>
+                    
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+    
+</div>
+<button name="forwardBtn" onclick="getDocumentData()">Submit</button>
+
+
+
+
+{% endblock  %}
